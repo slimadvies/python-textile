@@ -1,8 +1,7 @@
 
 h1. Textile Changelog
 
-h2. Version 4.0.4
-
+h2. Development
 * Bugfixes:
 **  Allow text blocks with spaces around first and last newlines
 
