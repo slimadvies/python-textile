@@ -442,9 +442,8 @@ class Textile(object):
 
         tag = 'p'
         atts = cite = ext = ''
-
         out = []
-
+        block = None
         for line in text:
             # the line is just whitespace, add it to the output, and move on
             if not line.strip():

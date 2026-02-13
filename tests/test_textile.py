@@ -242,3 +242,9 @@ def test_relURL():
     t = textile.Textile()
     t.restricted = True
     assert t.relURL("gopher://gopher.com/") == '#'
+
+
+def test_whitespace_at_beginning_and_end():
+    expect = textile.textile('   \n   Testing 1 2 3   \n   ', html_type='html5')
+    result = '\t<p>Testing 1 2 3</p>'
+    assert result == expect
