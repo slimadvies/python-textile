@@ -245,6 +245,6 @@ def test_relURL():
 
 
 def test_whitespace_at_beginning_and_end():
-    expect = textile.textile('   \n   Testing 1 2 3   \n   ', html_type='html5')
-    result = '\t<p>Testing 1 2 3</p>'
+    result = textile.textile('   \n   Testing 1 2 3   \n   ', html_type='html5')
+    expect = '   Testing 1 2 3   \n   '
     assert result == expect

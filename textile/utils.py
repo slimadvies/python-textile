@@ -149,9 +149,7 @@ def list_type(list_string):
 
 def normalize_newlines(string):
     out = re.sub(r'\r\n?', '\n', string)
-    # strip spaces around first and last newline
-    out = re.compile(r'^[ \t]*\n[ \t]*', flags=re.M).sub('\n', out)
-    out = re.compile(r'[ \t]*\n[ \t]*$', flags=re.M).sub('\n', out)
+    out = re.compile(r'^[ \t]*\n', flags=re.M).sub('\n', out)
     out = out.strip('\n')
     return out
 
